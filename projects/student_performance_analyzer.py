@@ -77,3 +77,15 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 
 plt.show()
+# Attendance vs Average Marks
+
+plt.figure(figsize=(8, 5))
+
+plt.scatter(df["Attendance"], df["Average"])
+
+plt.title("Attendance vs Average Marks")
+plt.xlabel("Attendance (%)")
+plt.ylabel("Average Marks")
+
+plt.tight_layout()
+plt.show()
