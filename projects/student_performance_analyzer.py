@@ -63,3 +63,17 @@ print("\nGrade Distribution:")
 print(df["Grade"].value_counts())
 
 print("\nAnalysis Completed Successfully!")
+# Student-wise Average Marks Chart
+
+plt.figure(figsize=(10, 5))
+
+plt.bar(df["Name"], df["Average"])
+
+plt.title("Student-wise Average Marks")
+plt.xlabel("Students")
+plt.ylabel("Average Marks")
+
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+plt.show()
