@@ -39,3 +39,24 @@ for name, marks in students.items():
 print("\n" + "=" * 45)
 print("Analysis Completed")
 print("=" * 45)
+# Subject-wise Average
+print("\nSubject-wise Average Marks:")
+
+for subject in subjects:
+    print(f"{subject}: {df[subject].mean():.2f}")
+
+# Attendance Analysis
+print("\nAttendance Analysis:")
+print(f"Average Attendance: {df['Attendance'].mean():.2f}%")
+
+# Students with high attendance
+high_attendance = df[df["Attendance"] >= 90]
+
+print("\nStudents with Attendance >= 90%:")
+print(high_attendance[["Name", "Attendance"]])
+
+# Grade Distribution
+print("\nGrade Distribution:")
+print(df["Grade"].value_counts())
+
+print("\nAnalysis Completed Successfully!")
