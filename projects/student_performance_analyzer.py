@@ -1,0 +1,41 @@
+# Student Performance Analyzer
+
+students = {
+    "Rahul": [78, 85, 92],
+    "Priya": [88, 76, 90],
+    "Aman": [65, 72, 68],
+    "Neha": [95, 91, 94]
+}
+
+print("=" * 45)
+print("       STUDENT PERFORMANCE ANALYZER")
+print("=" * 45)
+
+for name, marks in students.items():
+
+    total = sum(marks)
+    average = total / len(marks)
+
+    if average >= 90:
+        grade = "A+"
+    elif average >= 80:
+        grade = "A"
+    elif average >= 70:
+        grade = "B"
+    elif average >= 60:
+        grade = "C"
+    else:
+        grade = "D"
+
+    status = "Pass" if average >= 40 else "Fail"
+
+    print(f"\nStudent: {name}")
+    print(f"Marks: {marks}")
+    print(f"Total: {total}")
+    print(f"Average: {average:.2f}")
+    print(f"Grade: {grade}")
+    print(f"Status: {status}")
+
+print("\n" + "=" * 45)
+print("Analysis Completed")
+print("=" * 45)
